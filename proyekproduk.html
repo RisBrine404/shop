@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+        }
+        .product-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .product-info h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .product-info p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .quantity-control {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .quantity-control button {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .quantity-control button:hover {
+            background-color: #d63c00;
+        }
+        .quantity-control span {
+            font-size: 18px;
+            font-weight: bold;
+            width: 40px;
+            text-align: center;
+            display: inline-block;
+        }
+        .buy-button {
+            display: inline-block;
+            background-color: #ff4500;
+            color: white;
+            text-align: center;
+            padding: 10px 145px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .buy-button:hover {
+            background-color: #d63c00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Gambar Produk -->
+        <div class="product-image" style="background-image: url('https://via.placeholder.com/600x300');"></div>
+        
+        <!-- Informasi Produk -->
+        <div class="product-info">
+            <h1>Nama Produk</h1>
+            <p>Deskripsi singkat tentang produk ini. Contohnya bisa mencakup fitur, manfaat, atau bahan yang digunakan.</p>
+        </div>
+        
+        <!-- Kontrol Kuantitas -->
+        <div class="quantity-control">
+            <button onclick="changeQuantity(-1)">-</button>
+            <span id="quantity">1</span>
+            <button onclick="changeQuantity(1)">+</button>
+        </div>
+        
+        <!-- Tombol Buy -->
+        <a href="#" class="buy-button" onclick="sendWhatsApp()">Buy</a>
+    </div>
+
+    <script>
+        let quantity = 1; // Default jumlah produk
+
+        // Fungsi untuk menambah atau mengurangi jumlah produk
+        function changeQuantity(change) {
+            quantity = Math.max(1, quantity + change); // Minimal 1 produk
+            document.getElementById('quantity').textContent = quantity;
+        }
+
+        // Fungsi untuk mengirim data ke WhatsApp
+        function sendWhatsApp() {
+            const adminNumber = "6285755498964"; // Nomor WhatsApp admin
+            const productName = "Nama Produk"; // Nama produk
+            const productDescription = "Deskripsi singkat tentang produk ini."; // Deskripsi produk
+            const message = `Halo Admin Rishop,%0ASaya ingin memesan:%0A- Nama Produk: ${productName}%0A- Deskripsi: ${productDescription}%0A- Jumlah: ${quantity}`;
+            const url = `https://wa.me/${adminNumber}?text=${message}`;
+            window.open(url, "_blank");
+        }
+    </script>
+</body>
+</html>

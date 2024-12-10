@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            width: 95%;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Dua kolom */
+            gap: 15px;
+        }
+        .product-card {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-image {
+            width: 100%;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+        }
+        .product-info {
+            padding: 10px;
+        }
+        .product-info h3 {
+            font-size: 16px;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+        .product-info p {
+            margin: 0;
+            color: #ff4500;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>Rishop</header>
+    <div class="container">
+        <!-- Product 1 -->
+        <div class="product-card" onclick="redirectTo('https://example.com/product1')">
+            <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300');"></div>
+            <div class="product-info">
+                <h3>Product 1</h3>
+                <p>Rp 50.000</p>
+            </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card" onclick="redirectTo('https://example.com/product2')">
+            <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300');"></div>
+            <div class="product-info">
+                <h3>Product 2</h3>
+                <p>Rp 100.000</p>
+            </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card" onclick="redirectTo('https://example.com/product3')">
+            <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300');"></div>
+            <div class="product-info">
+                <h3>Product 3</h3>
+                <p>Rp 150.000</p>
+            </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product-card" onclick="redirectTo('https://example.com/product4')">
+            <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300');"></div>
+            <div class="product-info">
+                <h3>Product 4</h3>
+                <p>Rp 200.000</p>
+            </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-card" onclick="redirectTo('https://example.com/product5')">
+            <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300');"></div>
+            <div class="product-info">
+                <h3>Product 5</h3>
+                <p>Rp 250.000</p>
+            </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card" onclick="redirectTo('https://example.com/product6')">
+            <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300');"></div>
+            <div class="product-info">
+                <h3>Product 6</h3>
+                <p>Rp 300.000</p>
+            </div>
+        </div>
+        <!-- Product 7 -->
+        <div class="product-card" onclick="redirectTo('https://example.com/product7')">
+            <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300');"></div>
+            <div class="product-info">
+                <h3>Product 7</h3>
+                <p>Rp 350.000</p>
+            </div>
+        </div>
+        <!-- Product 8 -->
+        <div class="product-card" onclick="redirectTo('https://example.com/product8')">
+            <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300');"></div>
+            <div class="product-info">
+                <h3>Product 8</h3>
+                <p>Rp 400.000</p>
+            </div>
+        </div>
+        <!-- Product 9 -->
+        <div class="product-card" onclick="redirectTo('https://example.com/product9')">
+            <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300');"></div>
+            <div class="product-info">
+                <h3>Product 9</h3>
+                <p>Rp 450.000</p>
+            </div>
+        </div>
+        <!-- Product 10 -->
+        <div class="product-card" onclick="redirectTo('https://example.com/product10')">
+            <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300');"></div>
+            <div class="product-info">
+                <h3>Product 10</h3>
+                <p>Rp 500.000</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
